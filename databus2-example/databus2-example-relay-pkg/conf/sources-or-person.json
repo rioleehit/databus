@@ -1,7 +1,7 @@
 {
     "name" : "person",
     "id"  : 1,
-    "uri" : "mysql://or_test%2For_test@localhost:33066/33066/mysql-bin",
+    "uri" : "mysql://root%2F123qwe@localhost:3306/1/mysql-bin",
     "slowSourceQueryThreshold" : 2000,
     "sources" :
     [

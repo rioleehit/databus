@@ -1,7 +1,6 @@
 subprojects {
-   apply from: rootProject.file("subprojects.gradle")
-
-   dependencies {
+    apply from: rootProject.file("subprojects.gradle")
+    dependencies {
         //runtime externalDependency.log4j
         // Force easymock to version 3.1. One of the espresso dependencies changes it to 2.4
         // and v2.4 does not support mocking of classes, causing our espresso unit tests
@@ -11,10 +10,12 @@ subprojects {
         //}
         //compile(externalDependency.easymock) {
         //    force = true
-       //}
+        //}
     }
 }
-
 task wrapper(type: Wrapper) {
-  gradleVersion = '1.8'
+    gradleVersion = '1.8'
+}
+tasks.withType(JavaCompile){
+    options.encoding = "UTF-8"
 }

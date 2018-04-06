@@ -484,7 +484,7 @@ public abstract class ServerContainer
     {
       while (! _shutdownRequest)
       {
-        LOG.info("waiting for shutdown request for container id: " + _containerStaticConfig.getId());
+        LOG.info("[awaitShutdown]waiting for shutdown request for container id: " + _containerStaticConfig.getId());
         _shutdownCondition.awaitUninterruptibly();
       }
     }
@@ -518,7 +518,7 @@ public abstract class ServerContainer
       long waitTime;
       while (! _shutdownRequest && (waitTime = endTs - System.currentTimeMillis()) > 0)
       {
-        LOG.info("waiting for shutdown request for container id: " + _containerStaticConfig.getId());
+        LOG.info("[awaitShutdown"+timeoutMs+"]waiting for shutdown request for container id: " + _containerStaticConfig.getId());
         if (!_shutdownCondition.await(waitTime, TimeUnit.MILLISECONDS)) break;
       }
     }

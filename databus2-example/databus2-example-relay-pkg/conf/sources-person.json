@@ -6,8 +6,8 @@
 	"sources" :
 	[
 		{"id" : 101, 
-		 "name" : "com.linkedin.events.example.person.Person",
-		 "uri": "person.person", 
+		 "name" : "com.linkedin.events.example.or_test.Person",
+		 "uri": "or_test.person", 
 		 "partitionFunction" : "constant:1"
 		}
 	]
