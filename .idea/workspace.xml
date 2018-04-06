@@ -2,12 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a53b5e9-9ede-4045-9738-587b7e23bf05" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databus-core/databus-core-container/src/main/java/com/linkedin/databus2/core/container/netty/ServerContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/databus-core/databus-core-container/src/main/java/com/linkedin/databus2/core/container/netty/ServerContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databus2-example/databus2-example-client/src/main/java/com/linkedin/databus/client/example/PersonClientMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/databus2-example/databus2-example-client/src/main/java/com/linkedin/databus/client/example/PersonClientMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databus2-example/databus2-example-relay-pkg/conf/sources-or-person.json" beforeDir="false" afterPath="$PROJECT_DIR$/databus2-example/databus2-example-relay-pkg/conf/sources-or-person.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/metrics-histograms/metrics-core-impl/src/main/java/com/codahale/metrics/MergeableExponentiallyDecayingReservoir.java" beforeDir="false" afterPath="$PROJECT_DIR$/metrics-histograms/metrics-core-impl/src/main/java/com/codahale/metrics/MergeableExponentiallyDecayingReservoir.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databus2-example/database/README_Person" beforeDir="false" afterPath="$PROJECT_DIR$/databus2-example/database/README_Person" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databus2-example/database/dbreinit_persons.sh" beforeDir="false" afterPath="$PROJECT_DIR$/databus2-example/database/dbreinit_persons.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databus2-example/database/loadPersons.sh" beforeDir="false" afterPath="$PROJECT_DIR$/databus2-example/database/loadPersons.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databus2-example/database/person/person.tab" beforeDir="false" afterPath="$PROJECT_DIR$/databus2-example/database/person/person.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databus2-example/database/person/person.view" beforeDir="false" afterPath="$PROJECT_DIR$/databus2-example/database/person/person.view" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databus2-example/database/person/tablespace" beforeDir="false" afterPath="$PROJECT_DIR$/databus2-example/database/person/tablespace" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databus2-example/databus2-example-bst-producer-pkg/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/databus2-example/databus2-example-bst-producer-pkg/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databus2-example/databus2-example-bst-producer-pkg/conf/databus-bst-producer.properties" beforeDir="false" afterPath="$PROJECT_DIR$/databus2-example/databus2-example-bst-producer-pkg/conf/databus-bst-producer.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databus2-example/databus2-example-bst-producer-pkg/conf/databus-bst-producer_log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/databus2-example/databus2-example-bst-producer-pkg/conf/databus-bst-producer_log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databus2-example/databus2-example-bst-producer-pkg/script/setup-bst-producer.inc" beforeDir="false" afterPath="$PROJECT_DIR$/databus2-example/databus2-example-bst-producer-pkg/script/setup-bst-producer.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databus2-example/databus2-example-bst-producer-pkg/script/start-bst-producer.sh" beforeDir="false" afterPath="$PROJECT_DIR$/databus2-example/databus2-example-bst-producer-pkg/script/start-bst-producer.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databus2-example/databus2-example-bst-producer-pkg/script/stop-bst-producer.sh" beforeDir="false" afterPath="$PROJECT_DIR$/databus2-example/databus2-example-bst-producer-pkg/script/stop-bst-producer.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databus2-example/databus2-example-client-pkg/script/setup-client.inc" beforeDir="false" afterPath="$PROJECT_DIR$/databus2-example/databus2-example-client-pkg/script/setup-client.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databus2-example/databus2-example-client-pkg/script/start-example-client.sh" beforeDir="false" afterPath="$PROJECT_DIR$/databus2-example/databus2-example-client-pkg/script/start-example-client.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databus2-example/databus2-example-client-pkg/script/stop-example-client.sh" beforeDir="false" afterPath="$PROJECT_DIR$/databus2-example/databus2-example-client-pkg/script/stop-example-client.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databus2-example/databus2-example-relay-pkg/script/create_person.sh" beforeDir="false" afterPath="$PROJECT_DIR$/databus2-example/databus2-example-relay-pkg/script/create_person.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databus2-example/databus2-example-relay-pkg/script/setup-relay.inc" beforeDir="false" afterPath="$PROJECT_DIR$/databus2-example/databus2-example-relay-pkg/script/setup-relay.inc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databus2-example/databus2-example-relay-pkg/script/start-example-relay.sh" beforeDir="false" afterPath="$PROJECT_DIR$/databus2-example/databus2-example-relay-pkg/script/start-example-relay.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databus2-example/databus2-example-relay-pkg/script/stop-example-relay.sh" beforeDir="false" afterPath="$PROJECT_DIR$/databus2-example/databus2-example-relay-pkg/script/stop-example-relay.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databus2-example/schemas_registry/com.linkedin.events.example.person.Person.1.avsc" beforeDir="false" afterPath="$PROJECT_DIR$/databus2-example/schemas_registry/com.linkedin.events.example.person.Person.1.avsc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/setup.inc" beforeDir="false" afterPath="$PROJECT_DIR$/script/setup.inc" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,8 +64,8 @@
       <file leaf-file-name="PersonClientMain.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/databus2-example/databus2-example-client/src/main/java/com/linkedin/databus/client/example/PersonClientMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="25" column="70" selection-start-line="25" selection-start-column="70" selection-end-line="25" selection-end-column="70" />
+            <state relative-caret-position="440">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
@@ -154,24 +169,6 @@
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="databus" type="cbb8eebc:String" user="databus" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="databus" type="cbb8eebc:String" user="databus" />
-              <item name="databus2-example" type="cbb8eebc:String" user="databus2-example" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="databus" type="cbb8eebc:String" user="databus" />
-              <item name="databus2-example" type="cbb8eebc:String" user="databus2-example" />
-              <item name="databus2-example-relay" type="cbb8eebc:String" user="databus2-example-relay" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="databus" type="cbb8eebc:String" user="databus" />
-              <item name="databus2-example" type="cbb8eebc:String" user="databus2-example" />
-              <item name="databus2-example-relay" type="cbb8eebc:String" user="databus2-example-relay" />
-              <item name="src/main/java/com/linkedin/databus/relay/example" type="cbb8eebc:String" user="src/main/java/com/linkedin/databus/relay/example" />
             </path>
           </expand>
           <select />
@@ -298,7 +295,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -420,8 +416,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/databus2-example/databus2-example-client/src/main/java/com/linkedin/databus/client/example/PersonClientMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="25" column="70" selection-start-line="25" selection-start-column="70" selection-end-line="25" selection-end-column="70" />
+        <state relative-caret-position="440">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
