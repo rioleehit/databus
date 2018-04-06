@@ -267,11 +267,12 @@ public class OpenReplicatorEventProducer extends AbstractEventProducer
   @Override
   public synchronized void start(long sinceSCN)
   {
+    _log.info("startSCN="+ sinceSCN);
     long sinceSCNToUse = 0;
-
-    if (sinceSCN > 0)
+    long tmpSCN = sinceSCN;
+    if (tmpSCN > 0)
     {
-      sinceSCNToUse = sinceSCN;
+      sinceSCNToUse = tmpSCN;
     }
     else
     {
@@ -317,6 +318,7 @@ public class OpenReplicatorEventProducer extends AbstractEventProducer
     public EventProducerThread(String sourceName, long sinceScn)
     {
       super("OpenReplicator_" + sourceName);
+      _log.info("EventProducerThread init sourceName[" + sourceName + "]");
       _sourceName = sourceName;
       _sinceScn = sinceScn;
     }

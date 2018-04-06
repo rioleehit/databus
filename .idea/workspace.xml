@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5a53b5e9-9ede-4045-9738-587b7e23bf05" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databus-core/databus-core-container/src/main/java/com/linkedin/databus2/core/container/netty/ServerContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/databus-core/databus-core-container/src/main/java/com/linkedin/databus2/core/container/netty/ServerContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databus2-example/databus2-example-client-pkg/conf/client_person.properties" beforeDir="false" afterPath="$PROJECT_DIR$/databus2-example/databus2-example-client-pkg/conf/client_person.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databus2-example/databus2-example-relay-pkg/conf/or_relay_person.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/databus2-example/databus2-example-relay-pkg/conf/relay_or_person.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/databus2-example/databus2-example-relay-pkg/conf/relay_person.properties" beforeDir="false" afterPath="$PROJECT_DIR$/databus2-example/databus2-example-relay-pkg/conf/relay_person.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databus2-example/databus2-example-relay/src/main/java/com/linkedin/databus/relay/example/PersonRelayServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/databus2-example/databus2-example-relay/src/main/java/com/linkedin/databus/relay/example/PersonRelayServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databus2-relay/databus2-event-producer-or/src/main/java/com/linkedin/databus2/producers/OpenReplicatorEventProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/databus2-relay/databus2-event-producer-or/src/main/java/com/linkedin/databus2/producers/OpenReplicatorEventProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/databus2-relay/databus2-relay-impl/src/main/java/com/linkedin/databus2/producers/db/OracleTxlogEventReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/databus2-relay/databus2-relay-impl/src/main/java/com/linkedin/databus2/producers/db/OracleTxlogEventReader.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/databus2-example/databus2-example-relay">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="PersonClientMain.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/databus2-example/databus2-example-client/src/main/java/com/linkedin/databus/client/example/PersonClientMain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="33" column="58" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PersonConsumer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/databus2-example/databus2-example-client/src/main/java/com/linkedin/databus/client/example/PersonConsumer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="777">
+              <caret line="71" selection-start-line="71" selection-end-line="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PersonRelayServer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/databus2-example/databus2-example-relay/src/main/java/com/linkedin/databus/relay/example/PersonRelayServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="834">
+              <caret line="78" column="3" selection-start-line="78" selection-start-column="3" selection-end-line="78" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OpenReplicatorEventProducer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/databus2-relay/databus2-event-producer-or/src/main/java/com/linkedin/databus2/producers/OpenReplicatorEventProducer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="350" column="34" selection-start-line="350" selection-start-column="25" selection-end-line="350" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DtailCliBase.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/databus-tools/databus-dtail-impl/src/main/java/com/linkedin/databus2/tools/dtail/DtailCliBase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="78">
+              <caret line="120" column="8" selection-start-line="120" selection-start-column="8" selection-end-line="120" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OracleTxlogEventReader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/databus2-relay/databus2-relay-impl/src/main/java/com/linkedin/databus2/producers/db/OracleTxlogEventReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="539">
+              <caret line="192" column="121" selection-start-line="192" selection-start-column="121" selection-end-line="192" selection-end-column="121" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#33215#33216#0" expanded="true" />
+                <element signature="e#33239#33240#0" expanded="true" />
+                <element signature="e#33266#33267#0" expanded="true" />
+                <element signature="e#33350#33351#0" expanded="true" />
+                <element signature="e#33418#33419#0" expanded="true" />
+                <element signature="e#33469#33470#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OracleEventProducer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/databus2-relay/databus2-relay-impl/src/main/java/com/linkedin/databus2/producers/db/OracleEventProducer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="235">
+              <caret line="52" selection-start-line="52" selection-end-line="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractEventProducer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/databus2-relay/databus2-event-producer-common/src/main/java/com/linkedin/databus2/producers/AbstractEventProducer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="444">
+              <caret line="333" column="67" selection-start-line="333" selection-start-column="43" selection-end-line="333" selection-end-column="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HttpRelay.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/databus2-relay/databus2-relay-impl/src/main/java/com/linkedin/databus/container/netty/HttpRelay.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="763">
+              <caret line="1049" column="9" selection-start-line="1049" selection-start-column="9" selection-end-line="1049" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServerContainer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/databus-core/databus-core-container/src/main/java/com/linkedin/databus2/core/container/netty/ServerContainer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="359" column="29" selection-start-line="359" selection-start-column="29" selection-end-line="359" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>com.linkedin.events.example.person.Person</find>
+      <find>new EventProducerThread</find>
+      <find>sinceSCNToUse</find>
+      <find>maxScn</find>
+      <find>OracleEventProducer.s</find>
+      <find>1restartScnOffset</find>
+      <find>_eventSelectConnection</find>
+      <find>physicalSourcesConfigsPattern</find>
+      <find>setPhysicalSourcesConfigsPattern</find>
+      <find>person</find>
+      <find>AbstractEventProducer</find>
+      <find>OracleTxlogEventReader</find>
+      <find>readEventsFromAllSources</find>
+      <find>_sourceDBEventReader</find>
+      <find>OracleEventProducer</find>
+      <find>DataSource</find>
+      <find>com.linkedin.events.example.</find>
+      <find>StackTraceElement</find>
+      <find>_dataSource</find>
+      <find>rmi</find>
+      <find>EventProducerThread</find>
+      <find>Connecting to OpenReplicator</find>
+      <find>initOpenReplicator</find>
+      <find>_sinceScn</find>
+      <find>SCN_OPT_NAME</find>
+      <find>scn</find>
+      <find>MysqlMaxSCNHandler</find>
+      <find>relay_person</find>
+      <find>OptionBuilder</find>
+      <find>processCommandLineArgs</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/metrics-histograms/metrics-core-impl/src/main/java/com/codahale/metrics/MergeableExponentiallyDecayingReservoir.java" />
+        <option value="$PROJECT_DIR$/databus2-example/databus2-example-client/src/main/java/com/linkedin/databus/client/example/PersonClientMain.java" />
+        <option value="$PROJECT_DIR$/databus2-relay/databus2-event-producer-or/src/main/java/com/linkedin/databus2/producers/OpenReplicatorEventProducer.java" />
+        <option value="$PROJECT_DIR$/databus2-relay/databus2-relay-impl/src/main/java/com/linkedin/databus2/producers/db/OracleEventProducer.java" />
+        <option value="$PROJECT_DIR$/databus2-relay/databus2-relay-impl/src/main/java/com/linkedin/databus2/producers/db/OracleTxlogEventReader.java" />
+        <option value="$PROJECT_DIR$/databus2-example/databus2-example-relay/src/main/java/com/linkedin/databus/relay/example/PersonRelayServer.java" />
+        <option value="$PROJECT_DIR$/databus-core/databus-core-container/src/main/java/com/linkedin/databus2/core/container/netty/ServerContainer.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-15" />
+    <option name="y" value="-15" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="databus" type="cbb8eebc:String" user="databus" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="databus" type="cbb8eebc:String" user="databus" />
+              <item name="databus-core" type="cbb8eebc:String" user="databus-core" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="databus" type="cbb8eebc:String" user="databus" />
+              <item name="databus-core" type="cbb8eebc:String" user="databus-core" />
+              <item name="databus-core-container" type="cbb8eebc:String" user="databus-core-container" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="databus" type="cbb8eebc:String" user="databus" />
+              <item name="databus-core" type="cbb8eebc:String" user="databus-core" />
+              <item name="databus-core-container" type="cbb8eebc:String" user="databus-core-container" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="databus" type="cbb8eebc:String" user="databus" />
+              <item name="databus-core" type="cbb8eebc:String" user="databus-core" />
+              <item name="databus-core-container" type="cbb8eebc:String" user="databus-core-container" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="main/java/com/linkedin/databus2/core/container" type="cbb8eebc:String" user="main/java/com/linkedin/databus2/core/container" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="databus" type="cbb8eebc:String" user="databus" />
+              <item name="databus-core" type="cbb8eebc:String" user="databus-core" />
+              <item name="databus-core-container" type="cbb8eebc:String" user="databus-core-container" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="main/java/com/linkedin/databus2/core/container" type="cbb8eebc:String" user="main/java/com/linkedin/databus2/core/container" />
+              <item name="netty" type="cbb8eebc:String" user="netty" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="databus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="databus" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="external.system.task.project.file.to.start" value="$PROJECT_DIR$/databus2-example/databus2-example-relay" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/databus2-example/databus2-example-relay" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Gradle.egRelay">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="egRelay" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/databus2-example/databus2-example-relay" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="D:\workspace\databus\build\databus2-example-relay-pkg\distributions\bin\start-example-relay.sh person" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+    </configuration>
+    <configuration name="build" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+      <module name="databus" />
+      <setting name="path" value="file://$PROJECT_DIR$/build.gradle" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.egRelay" />
+      <item itemvalue="Groovy.build" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Groovy.build" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5a53b5e9-9ede-4045-9738-587b7e23bf05" name="Default" comment="" />
+      <created>1522982587957</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1522982587957</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.41976622" />
+      <window_info anchor="bottom" id="Dependency Viewer" weight="0.32943678" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32943678" />
+      <window_info anchor="right" id="Gradle" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/metrics-histograms/metrics-core-impl/src/main/java/com/codahale/metrics/MergeableExponentiallyDecayingReservoir.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="344" column="61" lean-forward="true" selection-start-line="344" selection-start-column="61" selection-end-line="344" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databus2-example/databus2-example-client/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databus2-example/databus2-example-relay/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="573">
+          <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databus-core/databus-core-impl/src/main/java/com/linkedin/databus2/util/DBHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databus2-relay/databus2-relay-impl/src/main/java/com/linkedin/databus2/relay/OracleEventProducerFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databus2-relay/databus2-relay-impl/src/main/java/com/linkedin/databus/container/netty/HttpRelay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="763">
+          <caret line="1049" column="9" selection-start-line="1049" selection-start-column="9" selection-end-line="1049" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databus2-relay/databus2-event-producer-common/src/main/java/com/linkedin/databus2/producers/AbstractEventProducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="333" column="67" selection-start-line="333" selection-start-column="43" selection-end-line="333" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databus2-relay/databus2-relay-impl/src/main/java/com/linkedin/databus2/producers/db/OracleEventProducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databus2-relay/databus2-relay-impl/src/main/java/com/linkedin/databus2/producers/db/OracleTxlogEventReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="192" column="121" selection-start-line="192" selection-start-column="121" selection-end-line="192" selection-end-column="121" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#33215#33216#0" expanded="true" />
+            <element signature="e#33239#33240#0" expanded="true" />
+            <element signature="e#33266#33267#0" expanded="true" />
+            <element signature="e#33350#33351#0" expanded="true" />
+            <element signature="e#33418#33419#0" expanded="true" />
+            <element signature="e#33469#33470#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databus2-example/databus2-example-client/src/main/java/com/linkedin/databus/client/example/PersonClientMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="33" column="58" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databus-core/databus-core-container/src/main/java/com/linkedin/databus2/core/container/netty/ServerContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="359" column="29" selection-start-line="359" selection-start-column="29" selection-end-line="359" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databus2-relay/databus2-event-producer-or/src/main/java/com/linkedin/databus2/producers/OpenReplicatorEventProducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="350" column="34" selection-start-line="350" selection-start-column="25" selection-end-line="350" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databus-tools/databus-dtail-impl/src/main/java/com/linkedin/databus2/tools/dtail/DtailCliBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="120" column="8" selection-start-line="120" selection-start-column="8" selection-end-line="120" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databus2-example/databus2-example-client/src/main/java/com/linkedin/databus/client/example/PersonConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="777">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databus2-example/databus2-example-relay/src/main/java/com/linkedin/databus/relay/example/PersonRelayServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="834">
+          <caret line="78" column="3" selection-start-line="78" selection-start-column="3" selection-end-line="78" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

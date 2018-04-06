@@ -190,6 +190,7 @@ public class OracleTxlogEventReader
       // Open the database connection if it is closed (at start or after an SQLException)
       if(_eventSelectConnection == null || _eventSelectConnection.isClosed())
       {
+          _log.info(_eventSelectConnection == null ? "_eventSelectConnection is null" : " _eventSelectConnection.isClosed" );
     	  resetConnections();
       }
 
