@@ -39,6 +39,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
+import java.rmi.registry.LocateRegistry;
 
 import javax.management.MBeanServer;
 import javax.management.remote.JMXConnectorServer;
@@ -344,6 +345,7 @@ public abstract class ServerContainer
                               _containerStaticConfig.getJmx().getRmiRegistryPort() + "/jmxrmi" +
                               _containerStaticConfig.getJmx().getJmxServicePort());
 
+        LocateRegistry.createRegistry(_containerStaticConfig.getJmx().getRmiRegistryPort());
         _jmxConnServer = JMXConnectorServerFactory.newJMXConnectorServer(jmxServiceUrl, null,
                                                                          getMbeanServer());
       }

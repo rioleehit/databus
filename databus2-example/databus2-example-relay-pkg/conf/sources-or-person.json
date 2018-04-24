@@ -1,7 +1,7 @@
 {
     "name" : "person",
     "id"  : 1,
-    "uri" : "mysql://root%2F123qwe@localhost:3306/1/mysql-bin",
+    "uri" : "mysql://root%2F123qwe@127.0.0.1:3306/1/mysql-bin",
     "slowSourceQueryThreshold" : 2000,
     "sources" :
     [
@@ -10,6 +10,12 @@
         "name" : "com.linkedin.events.example.or_test.Person",
         "uri": "or_test.person",
         "partitionFunction" : "constant:1"
-         }
+        },
+        {
+        "id" : 41,
+        "name" : "com.linkedin.events.example.or_test.Person2",
+        "uri": "or_test.person2",
+        "partitionFunction" : "constant:1"
+        }
     ]
 }

@@ -88,7 +88,9 @@ public abstract class DatabusThreadBase
             // wait for resume
             awaitUnPauseRequest();
             LOG.info("Resuming !!");
-          } catch(InterruptedException ie) {}
+          } catch(InterruptedException ie) {
+            LOG.error("awaitUnPauseRequest error. ", ie);
+          }
         }
 
         done = ! runOnce();
@@ -227,6 +229,7 @@ public abstract class DatabusThreadBase
 
   public void shutdown()
   {
+    _log.info("Shutdown ",new Exception());
     shutdownAsynchronously();
     awaitShutdownUniteruptibly();
   }

@@ -48,7 +48,8 @@ ext.externalDependency = [
     'ojdbc6': 'com.oracle:ojdbc6:11.2.0.2.0',
     'helixCore': 'org.apache.helix:helix-core:0.6.2.0',
     'or': 'com.linkedin.dds-mysql:open-replicator-impl:1.0.63',
-    'c3p0': 'com.mchange:c3p0:0.9.5'
+    'c3p0': 'com.mchange:c3p0:0.9.5',
+    'redis': 'redis.client:jedis:2.9.0'
 ];
 
 if (isDefaultEnvironment) {

@@ -7,4 +7,5 @@ dependencies {
 
   compile externalDependency.commonsCli
   compile externalDependency.log4j
+  compile externalDependency.redis
 }
