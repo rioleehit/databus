@@ -2314,7 +2314,7 @@ DbusEventBufferAppendable, DbusEventBufferStreamAppendable
           //DDS-737 : guards against the situation where first window is not completely written but buffer is deemed not empty;
           if (minScn < 0) {
             if (sinceScn >= prevScn) {
-              _log.error("Buffer still not fully ready; please wait for new events: sinceScn=" + sinceScn + " Anticipating events from scn=" + prevScn);
+              _log.info("Buffer still not fully ready; please wait for new events: sinceScn=" + sinceScn + " Anticipating events from scn=" + prevScn);
             } else {
               _log.error("Buffer still not fully ready; but request will be obsolete sinceScn=" + sinceScn + " Anticipating events from scn=" + prevScn);
               throw new ScnNotFoundException();
