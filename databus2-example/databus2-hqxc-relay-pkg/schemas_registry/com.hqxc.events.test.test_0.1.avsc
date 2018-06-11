@@ -1,0 +1,73 @@
+{
+	"name": "Test_0_V1",
+	"doc": "Auto-generated Avro schema for sy$person. Generated at Dec 04, 2012 05:07:05 PM PST",
+	"type": "record",
+	"meta": "dbFieldName=t_test_source_0;pk=id;",
+	"namespace": "com.hqxc.events.test",
+	"fields": [
+		{
+			"name": "id",
+			"type": [
+				"long",
+				"null"
+			],
+			"meta": "dbFieldName=id;dbFieldPosition=0;"
+		},
+		{
+			"name": "test_char",
+			"type": [
+				"string",
+				"null"
+			],
+			"meta": "dbFieldName=test_char;dbFieldPosition=1;"
+		},
+		{
+			"name": "test_int",
+			"type": [
+				"long",
+				"null"
+			],
+			"meta": "dbFieldName=test_int;dbFieldPosition=2;"
+		},
+		{
+			"name": "test_text",
+			"type": [
+				"string",
+				"null"
+			],
+			"meta": "dbFieldName=test_text;dbFieldPosition=3;"
+		},
+		{
+			"name": "test_float",
+			"type": [
+				"float",
+				"null"
+			],
+			"meta": "dbFieldName=test_float;dbFieldPosition=4;"
+		},
+		{
+			"name": "test_double",
+			"type": [
+				"double",
+				"null"
+			],
+			"meta": "dbFieldName=test_double;dbFieldPosition=5;"
+		},
+		{
+			"name": "birth_date",
+			"type": [
+				"long",
+				"null"
+			],
+			"meta": "dbFieldName=birth_date;dbFieldPosition=6;"
+		},
+		{
+			"name": "deleted",
+			"type": [
+				"string",
+				"null"
+			],
+			"meta": "dbFieldName=DELETED;dbFieldPosition=7;"
+		}
+	]
+}

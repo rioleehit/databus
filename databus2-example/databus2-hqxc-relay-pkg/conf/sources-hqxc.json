@@ -1,0 +1,21 @@
+{
+    "name" : "db_test",
+    "id"  : 1,
+    "uri" : "mysql://otis%2F123qwe@192.168.137.154:3306/1/mysql-bin",
+    "slowSourceQueryThreshold" : 2000,
+    "sources" :
+    [
+        {
+        "id" : 40,
+        "name" : "com.hqxc.events.test.test_0",
+        "uri": "db_test.t_test_source_0",
+        "partitionFunction" : "constant:1"
+        },
+        {
+        "id" : 41,
+        "name" : "com.hqxc.events.test.test_1",
+        "uri": "db_test.t_test_source_1",
+        "partitionFunction" : "constant:1"
+        }
+    ]
+}

@@ -1067,8 +1067,20 @@ public class DatabusHttpClientImpl extends ServerContainer implements DatabusCli
     List<ServerInfo> candidateServers = findServers(groupsServers, sources);
     if (0 == candidateServers.size())
     {
+      String serverInfors="{";
+      for(Map.Entry<List<DatabusSubscription>, Set<ServerInfo>> entry:groupsServers.entrySet())
+      {
+        //System.out.println(entry.getKey()+":"+entry.getValue());
+        String key = "\"";
+        for(DatabusSubscription d : entry.getKey()){  key += d.toString() + ",";  }
+        key += "\":";
+        String value = "[";
+        for(ServerInfo i : entry.getValue()){value += i.toString() + ",";}
+        value +="]";
+      }
+      serverInfors +="}";
 
-      throw new DatabusClientException("Unable to find servers to support sources: " + sources);
+      throw new DatabusClientException("ServerInfor "+serverInfors+"\nUnable to find servers to support sources: " + sources);
     }
     Random rng = new Random();
     ServerInfo randomRelay = candidateServers.get(rng.nextInt(candidateServers.size()));

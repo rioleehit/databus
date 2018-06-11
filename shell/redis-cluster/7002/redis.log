@@ -1,0 +1,78 @@
+69900:C 05 Jun 09:48:55.357 # Can't chdir to '/var/lib/redis': Permission denied
+72187:M 05 Jun 10:17:05.667 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+72187:M 05 Jun 10:17:05.669 * No cluster configuration found, I'm 600261ad732c754e077f6da67508ebc93d73e513
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 3.2.10 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in cluster mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 7002
+ |    `-._   `._    /     _.-'    |     PID: 72187
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+72187:M 05 Jun 10:17:05.675 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+72187:M 05 Jun 10:17:05.676 # Server started, Redis version 3.2.10
+72187:M 05 Jun 10:17:05.676 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+72187:M 05 Jun 10:17:05.676 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+72187:M 05 Jun 10:17:05.677 * The server is now ready to accept connections on port 7002
+72187:M 05 Jun 10:17:57.369 # configEpoch set to 3 via CLUSTER SET-CONFIG-EPOCH
+72187:M 05 Jun 10:17:57.571 # IP address for this node updated to 127.0.0.1
+72187:M 05 Jun 10:18:02.311 # Cluster state changed: ok
+72187:M 05 Jun 10:18:02.313 * Slave 127.0.0.1:7004 asks for synchronization
+72187:M 05 Jun 10:18:02.313 * Full resync requested by slave 127.0.0.1:7004
+72187:M 05 Jun 10:18:02.313 * Starting BGSAVE for SYNC with target: disk
+72187:M 05 Jun 10:18:02.315 * Background saving started by pid 72265
+72265:C 05 Jun 10:18:02.319 * DB saved on disk
+72265:C 05 Jun 10:18:02.320 * RDB: 2 MB of memory used by copy-on-write
+72187:M 05 Jun 10:18:02.411 * Background saving terminated with success
+72187:M 05 Jun 10:18:02.412 * Synchronization with slave 127.0.0.1:7004 succeeded
+72187:signal-handler (1528185491) Received SIGTERM scheduling shutdown...
+72187:M 05 Jun 15:58:11.476 # User requested shutdown...
+72187:M 05 Jun 15:58:11.476 * Calling fsync() on the AOF file.
+72187:M 05 Jun 15:58:11.476 * Saving the final RDB snapshot before exiting.
+72187:M 05 Jun 15:58:12.651 * DB saved on disk
+72187:M 05 Jun 15:58:12.651 * Removing the pid file.
+72187:M 05 Jun 15:58:12.651 # Redis is now ready to exit, bye bye...
+72841:M 11 Jun 17:53:37.197 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+72841:M 11 Jun 17:53:37.256 * Node configuration loaded, I'm 600261ad732c754e077f6da67508ebc93d73e513
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 3.2.10 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in cluster mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 7002
+ |    `-._   `._    /     _.-'    |     PID: 72841
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+72841:M 11 Jun 17:53:37.258 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+72841:M 11 Jun 17:53:37.258 # Server started, Redis version 3.2.10
+72841:M 11 Jun 17:53:37.258 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+72841:M 11 Jun 17:53:37.258 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+72841:M 11 Jun 17:53:37.259 * The server is now ready to accept connections on port 7002
+72841:M 11 Jun 17:53:38.320 * Slave 127.0.0.1:7004 asks for synchronization
+72841:M 11 Jun 17:53:38.320 * Full resync requested by slave 127.0.0.1:7004
+72841:M 11 Jun 17:53:38.320 * Starting BGSAVE for SYNC with target: disk
+72841:M 11 Jun 17:53:38.325 * Background saving started by pid 72858
+72858:C 11 Jun 17:53:38.330 * DB saved on disk
+72858:C 11 Jun 17:53:38.331 * RDB: 4 MB of memory used by copy-on-write
+72841:M 11 Jun 17:53:38.380 * Background saving terminated with success
+72841:M 11 Jun 17:53:38.380 * Synchronization with slave 127.0.0.1:7004 succeeded
+72841:M 11 Jun 17:53:39.295 # Cluster state changed: ok

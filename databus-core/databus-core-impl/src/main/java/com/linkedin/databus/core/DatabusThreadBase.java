@@ -229,7 +229,8 @@ public abstract class DatabusThreadBase
 
   public void shutdown()
   {
-    _log.info("Shutdown ",new Exception());
+    //_log.info("Shutdown ",new Exception());
+    _log.info("Shutdown ");
     shutdownAsynchronously();
     awaitShutdownUniteruptibly();
   }

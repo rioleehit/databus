@@ -1,0 +1,23 @@
+apply plugin: 'idea'
+apply plugin: 'java'
+
+repositories {
+  mavenCentral()
+  maven { url "http://repo.spring.io/release" }
+}
+
+dependencies {
+  compile(
+          "org.springframework:spring-context:5.0.6.RELEASE",
+          "org.springframework:spring-web:5.0.6.RELEASE",
+          "org.springframework:spring-webmvc:5.0.6.RELEASE"
+  )
+  compile project(':databus-client:databus-client-api')
+  compile project(':databus-client:databus-client-common')
+  compile project(':databus-client:databus-client-http')
+
+  compile externalDependency.commonsCli
+  compile externalDependency.log4j
+  compile externalDependency.redis
+  compile externalDependency.mysqlConnectorJava
+}

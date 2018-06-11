@@ -38,7 +38,8 @@ ext.externalDependency = [
     'luceneCore': 'org.apache.lucene:lucene-core:2.9.1',
     'luceneQueries': 'org.apache.lucene:lucene-queries:2.9.1',
     'metricsCore': 'com.codahale.metrics:metrics-core:3.0.1',
-    'mysqlConnectorJava': 'org.mysql:mysql-connector-java:5.1.14',
+  /*原来 是  'mysqlConnectorJava': 'org.mysql:mysql-connector-java:5.1.14',*/
+    'mysqlConnectorJava': 'org.mysql:mysql-connector-java:5.1.45',
     'netty': 'org.jboss.netty:netty:3.2.4.Final',
     'snakeyaml': 'org.yaml:snakeyaml:1.8',
     'testng': 'org.testng:testng:6.4',
@@ -53,7 +54,7 @@ ext.externalDependency = [
 ];
 
 if (isDefaultEnvironment) {
-  externalDependency['mysqlConnectorJava'] = 'mysql:mysql-connector-java:5.1.14'
+  /* 使用5.1.14 所以注销  externalDependency['mysqlConnectorJava'] = 'mysql:mysql-connector-java:5.1.14'*/
   externalDependency['helixCore'] = 'org.apache.helix:helix-core:0.6.2-incubating'
   externalDependency['or'] = 'com.google:open-replicator:1.0.7'
   externalDependency['log4j'] = 'org.slf4j:slf4j-log4j12:1.6.1'

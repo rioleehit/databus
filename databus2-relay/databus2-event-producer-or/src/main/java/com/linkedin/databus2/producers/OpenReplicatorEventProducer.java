@@ -267,7 +267,6 @@ public class OpenReplicatorEventProducer extends AbstractEventProducer
   @Override
   public synchronized void start(long sinceSCN)
   {
-    _log.info("startSCN="+ sinceSCN);
     long sinceSCNToUse = 0;
     long tmpSCN = sinceSCN;
     if (tmpSCN > 0)
@@ -297,6 +296,7 @@ public class OpenReplicatorEventProducer extends AbstractEventProducer
         }
       }
     }
+    _log.info("startSCN="+ sinceSCNToUse);
     _producerThread = new EventProducerThread(_physicalSourceName, sinceSCNToUse);
     _producerThread.start();
   }
@@ -348,6 +348,7 @@ public class OpenReplicatorEventProducer extends AbstractEventProducer
     @Override
     public void run()
     {
+      _log.info("run OpenReplicator with _sinceScn="+_sinceScn);
       _eventBuffer.start(_sinceScn);
       _startPrevScn.set(_sinceScn);
 
@@ -374,6 +375,7 @@ public class OpenReplicatorEventProducer extends AbstractEventProducer
       }
 
       long lastConnectMs = System.currentTimeMillis();
+      LOG.info("workIntervalMs " +_workIntervalMs);
       while (!isShutdownRequested())
       {
         if (isPauseRequested())
