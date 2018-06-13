@@ -8,11 +8,16 @@ echo "channel subscriber \n";
             'port'     => 7000
         ),
     )*/
-$redis = new Redis();
-$redis->connect('127.0.0.1',7000);
+//$redis = new Redis();
+//$redis->connect('127.0.0.1',7000);
+
+//后面加入了timeout和read_timeout功能。就是加到master列表的后面。
+$redis = new RedisCluster(
+    NULL, Array("localhost:7000", "localhost:7001", 1.5, 1.5);
+);
 $channel1 = 'com_hqxc_events_test_test_0'; // channel
 function callback0($redis, $channel, $message) {
-	echo $channel.'\t'.'callback0'.$message;
+	echo $channel.'    '.'callback0    '.$message.PHP_EOL;
 }
 $redis->subscribe([$channel1], 'callback0');
 

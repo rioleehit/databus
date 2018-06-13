@@ -6,14 +6,14 @@
     "sources" :
     [
         {
-        "id" : 40,
-        "name" : "com.hqxc.events.test.test_0",
+        "id" : 72,
+        "name" : "com.hqxc.events.test.test0",
         "uri": "db_test.t_test_source_0",
         "partitionFunction" : "constant:1"
         },
         {
-        "id" : 41,
-        "name" : "com.hqxc.events.test.test_1",
+        "id" : 73,
+        "name" : "com.hqxc.events.test.test1",
         "uri": "db_test.t_test_source_1",
         "partitionFunction" : "constant:1"
         }

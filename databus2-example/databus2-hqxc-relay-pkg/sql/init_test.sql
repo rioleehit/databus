@@ -43,19 +43,22 @@ create table if not exists t_test_check_1(
 );
 
 
-insert into t_test_source_0 value(28,'aa', 0,'a13udfg5', 0.5,0.6,'2018-4-8', 'false');
-insert into t_test_source_0 value(3,'aa', 0,'a13udfg5', 0.5,0.6,'2018-4-8', 'false');
+insert into t_test_source_0 value(6,'aa', 0,'a13udfg5', 0.5,0.6,'2018-4-8', 'false');
+insert into t_test_source_0 value(7,'aa', 0,'a13udfg5', 0.5,0.6,'2018-4-8', 'false');
 insert into t_test_source_1 value(28,'aa', 0,'a13udfg5', 0.5,0.6,'2018-4-8', 'false');
-insert into t_test_source_1 value(3,'aa', 0,'a13udfg5', 0.5,0.6,'2018-4-8', 'false');
-insert into t_test_source_1 value(28,'bb','a13udfg5','eee','2018-4-8','0');
+insert into t_test_source_1 value(9,'aa', 0,'a13udfg5', 0.5,0.6,'2018-4-8', 'false');
 
 PURGE MASTER LOGS BEFORE DATE_SUB( NOW( ), INTERVAL 3 DAY);
 show binlog events;
-show binlog events in 'mysql-bin.000019';
+show binlog events in 'mysql-bin.000025';
 show binary logs;
 show master status;
 SHOW SLAVE STATUS;
 
+GRANT ALL on maxwell.* to 'maxwell'@'%' identified by '123qwe';
+
+
+flush logs;
 show variables like '%server_id%';
 show variables like 'log_bin';
 show variables like 'log_%';

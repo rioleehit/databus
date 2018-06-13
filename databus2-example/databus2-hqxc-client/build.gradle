@@ -16,8 +16,11 @@ dependencies {
   compile project(':databus-client:databus-client-common')
   compile project(':databus-client:databus-client-http')
 
+  compile externalDependency.jts
+  compile externalDependency.commonsPool2
   compile externalDependency.commonsCli
   compile externalDependency.log4j
   compile externalDependency.redis
   compile externalDependency.mysqlConnectorJava
+  compile externalDependency.json
 }

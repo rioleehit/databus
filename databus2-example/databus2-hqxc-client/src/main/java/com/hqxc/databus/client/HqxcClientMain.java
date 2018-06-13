@@ -19,82 +19,79 @@ package com.hqxc.databus.client;
 */
 
 
+import java.util.Properties;
+import java.util.function.Supplier;
+import java.io.FileInputStream;
+import redis.clients.jedis.JedisPoolConfig;
+import redis.clients.jedis.JedisShardInfo;
+import redis.clients.jedis.ShardedJedis;
+import redis.clients.jedis.ShardedJedisPool;
+import redis.clients.jedis.HostAndPort;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
+
 import com.linkedin.databus.client.consumer.AbstractDatabusCombinedConsumer;
 import com.linkedin.databus.client.DatabusHttpClientImpl;
 import org.apache.log4j.Logger;
-import  com.hqxc.databus.client.test.*;
+//import com.hqxc.databus.client.IConsumerSupplier;
+import com.hqxc.databus.client.test.*;
 
 public class HqxcClientMain
 {
-  static final String PERSON_SOURCE0 = "com.hqxc.events.test.test_0";
-  static final String PERSON_SOURCE1 = "com.hqxc.events.test.test_1";
+    static final String PERSON_SOURCE0 = "com.hqxc.events.test.test0";
+    static final String PERSON_SOURCE1 = "com.hqxc.events.test.test1";
 
-  public static final Logger LOG = Logger.getLogger(HqxcClientMain.class.getName());
+    public static ShardedJedisPool createPool(){
+        ShardedJedisPool p = null;
+        try{
+            Properties prop = new Properties();
+            FileInputStream fis = new FileInputStream("./conf/redis.properties");
+            prop.load(fis);
+            fis.close();
 
-  public static  DatabusHttpClientImpl startConsumer(String[] args, String source,AbstractDatabusCombinedConsumer consumer){
-    try {
-      DatabusHttpClientImpl.Config configBuilder = new DatabusHttpClientImpl.Config();
+            String hosts = prop.getProperty("redis.hosts");
+            System.out.println("hosts  " + hosts);
 
-      //Try to connect to a relay on localhost
-      configBuilder.getRuntime().getRelay("1").setHost("localhost");
-      configBuilder.getRuntime().getRelay("1").setPort(11115);
-      configBuilder.getRuntime().getRelay("1").setSources(source );
+            JedisPoolConfig config = new JedisPoolConfig();
+            config.setMaxTotal(Integer.valueOf(prop.getProperty("redis.pool.maxTotal")));
+            config.setMaxWaitMillis(Long.valueOf(prop.getProperty("redis.pool.maxWaitMillis")));
+            config.setMaxIdle(Integer.valueOf(prop.getProperty("redis.pool.maxIdle")));
+            config.setTestOnBorrow(Boolean.valueOf(prop.getProperty("redis.pool.testOnBorrow")));
+            //config.setTestOnReturn(Boolean.valueOf(prop.getProperty("redis.pool.testOnReturn")));
 
-      //Instantiate a client using command-line parameters if any
-      DatabusHttpClientImpl client = DatabusHttpClientImpl.createFromCli(args, configBuilder);
-
-      //register callbacks
-      //Test0Consumer test0Consumer = new Test0Consumer();
-      client.registerDatabusStreamListener(consumer, null, source);
-      client.registerDatabusBootstrapListener(consumer, null, source);
-      //fire off the Databus client
-      //client.startAndBlock();
-        return client;
-    }catch (Exception e){
-      LOG.error("error ", e);
+            List<JedisShardInfo> infoList = new ArrayList<JedisShardInfo>();
+            Set<HostAndPort> clusterNodes = new HashSet<HostAndPort>();
+            for (String s : hosts.split(",")) {
+                String[] ss = s.split(":");
+                if (ss.length < 2) { continue; }
+                JedisShardInfo shardInfo = new JedisShardInfo(ss[0], Integer.parseInt(ss[1]), 500);
+                infoList.add(shardInfo);
+                clusterNodes.add(new HostAndPort(ss[0], Integer.parseInt(ss[1])));
+            }
+            p = new ShardedJedisPool(config, infoList);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return p;
     }
-    return null;
+    public static ShardedJedisPool s_pool = null;
+    public static void main(String[] args) throws Exception
+    {
+        ClientImp c1 = new ClientImp(PERSON_SOURCE0,"192.168.137.154", 11115, new ClientImp.ConsumerSupplier(){
+            private Test0Consumer ref = null;
+            public AbstractDatabusCombinedConsumer get(){
+                ref = new Test0Consumer(HqxcClientMain.s_pool.getResource(), PERSON_SOURCE0);
+                return ref;
+            }
+            public void disposed(){if(ref!=null){ref.disposed();} }
+        });
+        s_pool = createPool();
+        DatabusHttpClientImpl client = c1.startConsumer(args);
+        if(client == null){return;}
+        client.startAndBlock();
+        c1.disposed();
+        s_pool.close();
   }
-
-  public static void main(String[] args)
-  {
-    try {
-      DatabusHttpClientImpl c0 = startConsumer(args, PERSON_SOURCE0, new Test0Consumer());
-      DatabusHttpClientImpl c1 = startConsumer(args, PERSON_SOURCE1, new Test1Consumer());
-      if(c0!=null){c0.awaitShutdown();}
-      if(c1!=null){c1.awaitShutdown();}
-      /*
-      DatabusHttpClientImpl.Config configBuilder = new DatabusHttpClientImpl.Config();
-
-      //Try to connect to a relay on localhost
-      configBuilder.getRuntime().getRelay("1").setHost("localhost");
-      configBuilder.getRuntime().getRelay("1").setPort(11115);
-//    configBuilder.getRuntime().getRelay("1").setSources(PERSON_SOURCE0);
-      configBuilder.getRuntime().getRelay("1").setSources({PERSON_SOURCE0} );
-      //configBuilder.getRuntime().getRelay("1").setSources(PERSON_SOURCE1);
-
-      //Instantiate a client using command-line parameters if any
-      DatabusHttpClientImpl client = DatabusHttpClientImpl.createFromCli(args, configBuilder);
-
-//    //register callbacks
-//    PersonConsumer personConsumer = new PersonConsumer();
-//    client.registerDatabusStreamListener(personConsumer, null, PERSON_SOURCE);
-//    client.registerDatabusBootstrapListener(personConsumer, null, PERSON_SOURCE);
-
-      //register callbacks
-      Test0Consumer test0Consumer = new Test0Consumer();
-      client.registerDatabusStreamListener(test0Consumer, null, PERSON_SOURCE0);
-      client.registerDatabusBootstrapListener(test0Consumer, null, PERSON_SOURCE0);
-      Test1Consumer test1Consumer = new Test1Consumer();
-      client.registerDatabusStreamListener(test1Consumer, null, PERSON_SOURCE1);
-      client.registerDatabusBootstrapListener(test1Consumer, null, PERSON_SOURCE1);
-
-      //fire off the Databus client
-      client.startAndBlock();
-      */
-    }catch (Exception e){
-      LOG.error("error ", e);
-    }
-  }
-
 }

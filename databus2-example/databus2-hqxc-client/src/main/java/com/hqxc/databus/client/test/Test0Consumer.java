@@ -29,33 +29,27 @@ import com.linkedin.databus.client.pub.DbusEventDecoder;
 import com.linkedin.databus.core.DbusEvent;
 
 import redis.clients.jedis.Jedis;
-import java.sql.*;
+import redis.clients.jedis.JedisPubSub;
+import redis.clients.jedis.ShardedJedis;
+import org.json.JSONObject;
+//import java.sql.*;
 
 
 public class Test0Consumer extends AbstractDatabusCombinedConsumer
 {
   public static final Logger LOG = Logger.getLogger(Test0Consumer.class.getName());
 
-  private Jedis jedis = null;
-
-  // JDBC 驱动名及数据库 URL
-  static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-  static final String DB_URL = "jdbc:mysql://localhost:3306/RUNOOB";
-
-  // 数据库的用户名与密码，需要根据自己的设置
-  static final String USER = "otis";
-  static final String PASS = "123qwe";
-  Connection conn = null;
-  Statement stmt = null;
-
-  public Test0Consumer(){
-      jedis = new Jedis("localhost");
-      LOG.info("connect redis: "+jedis.ping());
-
-
-
-
+  public Test0Consumer(ShardedJedis jedis, String channel){
+    m_jedis = jedis;
+    m_channelName = channel;
+    //LOG.info("connect redis: "+m_jedis.ping());
   }
+  public void disposed(){
+    m_jedis.close();
+    m_jedis = null;
+  }
+  private String m_channelName;
+  private ShardedJedis m_jedis = null;
   @Override
   public ConsumerCallbackResult onDataEvent(DbusEvent event,
                                             DbusEventDecoder eventDecoder)
@@ -73,84 +67,45 @@ public class Test0Consumer extends AbstractDatabusCombinedConsumer
   private ConsumerCallbackResult processEvent(DbusEvent event,
                                               DbusEventDecoder eventDecoder)
   {
-    GenericRecord decodedEvent = eventDecoder.getGenericRecord(event, null);
-
-
-    try{
-      // 注册 JDBC 驱动
-      Class.forName("com.mysql.jdbc.Driver");
-
-      // 打开链接
-      LOG.info("连接数据库");
-      conn = DriverManager.getConnection(DB_URL,USER,PASS);
-
-      // 执行查询
-      LOG.info(" 实例化Statement对象...");
-      stmt = conn.createStatement();
-      String sql;
-      sql = "SELECT id, name, url FROM websites";
-      ResultSet rs = stmt.executeQuery(sql);
-
-      // 展开结果集数据库
-      while(rs.next()){
-        // 通过字段检索
-        int id  = rs.getInt("id");
-        String name = rs.getString("name");
-        String url = rs.getString("url");
-
-        // 输出数据
-        LOG.info("ID: " + id);
-        LOG.info(", 站点名称: " + name);
-        LOG.info(", 站点 URL: " + url);
-      }
-      // 完成后关闭
-      rs.close();
-      stmt.close();
-      conn.close();
-    }catch(SQLException se){
-      // 处理 JDBC 错误
-      se.printStackTrace();
-      LOG.error("error decoding event ", se);
-    }catch(Exception e){
-      // 处理 Class.forName 错误
-      e.printStackTrace();
-      LOG.error("error decoding event ", e);
-    }finally{
-      // 关闭资源
-      try{
-        if(stmt!=null) stmt.close();
-      }catch(SQLException se2){
-        LOG.error("error decoding event ", se2);
-      }// 什么都不做
-      try{
-        if(conn!=null) conn.close();
-      }catch(SQLException se){
-        se.printStackTrace();
-        LOG.error("error decoding event ", se);
-        return ConsumerCallbackResult.ERROR;
-      }
-    }
-    return ConsumerCallbackResult.SUCCESS;
-
-
-
     try {
+
+      JSONObject j = new JSONObject();
+
+      GenericRecord decodedEvent = eventDecoder.getGenericRecord(event, null);
       Long id = (Long)decodedEvent.get("id");
-      Utf8 firstName = (Utf8)decodedEvent.get("firstName");
-      Utf8 lastName = (Utf8)decodedEvent.get("lastName");
+      Utf8 test_char = (Utf8)decodedEvent.get("test_char");
+      Long test_int = (Long)decodedEvent.get("test_int");
+      Utf8 test_text = (Utf8)decodedEvent.get("test_text");
+      Float test_float = (Float)decodedEvent.get("test_float");
+      Double test_double = (Double)decodedEvent.get("test_double");
       Long birthDate = (Long)decodedEvent.get("birthDate");
       Utf8 deleted = (Utf8)decodedEvent.get("deleted");
 
-      String json = "\"id\":" + id +
-              ", \"firstName\": \"" + firstName.toString() +
-              "\", \"lastName\": \"" + lastName.toString() +
-              "\", \"birthDate\": " + birthDate +
-              ", \"deleted\": \"" + deleted.toString()+"\"";
-      LOG.info(json);
-      if(jedis!=null){
-          jedis.set("id"+id, json);
-          LOG.info("redis save: "+ jedis.get("id"+id));
+      if(m_jedis==null) {
+        LOG.error("jedis is null");
+        return ConsumerCallbackResult.ERROR;
       }
+      Jedis[] jedisArray = new Jedis[]{};
+      jedisArray = m_jedis.getAllShards().toArray(jedisArray);
+      if(jedisArray.length == 0){
+          LOG.error("jedis is empty");
+          return ConsumerCallbackResult.ERROR;
+      }
+      Jedis tmpJ = jedisArray[0];
+
+      JSONObject line = new JSONObject();
+      line.put("id",id);
+      line.put("test_char",test_char);
+      line.put("test_int",test_int);
+      line.put("test_text",test_text);
+      line.put("test_float",test_float);
+      line.put("test_double",test_double);
+      line.put("birthDate",birthDate);
+      line.put("deleted",deleted);
+
+      tmpJ.publish(m_channelName, line.toString());
+
+      LOG.info("line=" + line.toString());
     } catch (Exception e) {
       LOG.error("error decoding event ", e);
       return ConsumerCallbackResult.ERROR;

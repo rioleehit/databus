@@ -1,8 +1,8 @@
 {
-	"name": "Test_0_V1",
+	"name": "test1_V1",
 	"doc": "Auto-generated Avro schema for sy$person. Generated at Dec 04, 2012 05:07:05 PM PST",
 	"type": "record",
-	"meta": "dbFieldName=t_test_source_0;pk=id;",
+	"meta": "dbFieldName=t_test_source_1;pk=id;",
 	"namespace": "com.hqxc.events.test",
 	"fields": [
 		{
@@ -14,60 +14,60 @@
 			"meta": "dbFieldName=id;dbFieldPosition=0;"
 		},
 		{
-			"name": "test_char",
+			"name": "test_char2",
 			"type": [
 				"string",
 				"null"
 			],
-			"meta": "dbFieldName=test_char;dbFieldPosition=1;"
+			"meta": "dbFieldName=test_char2;dbFieldPosition=1;"
 		},
 		{
-			"name": "test_int",
+			"name": "test_int2",
 			"type": [
 				"long",
 				"null"
 			],
-			"meta": "dbFieldName=test_int;dbFieldPosition=2;"
+			"meta": "dbFieldName=test_int2;dbFieldPosition=2;"
 		},
 		{
-			"name": "test_text",
+			"name": "test_text2",
 			"type": [
 				"string",
 				"null"
 			],
-			"meta": "dbFieldName=test_text;dbFieldPosition=3;"
+			"meta": "dbFieldName=test_text2;dbFieldPosition=3;"
 		},
 		{
-			"name": "test_float",
+			"name": "test_float2",
 			"type": [
 				"float",
 				"null"
 			],
-			"meta": "dbFieldName=test_float;dbFieldPosition=4;"
+			"meta": "dbFieldName=test_float2;dbFieldPosition=4;"
 		},
 		{
-			"name": "test_double",
+			"name": "test_double2",
 			"type": [
 				"double",
 				"null"
 			],
-			"meta": "dbFieldName=test_double;dbFieldPosition=5;"
+			"meta": "dbFieldName=test_double2;dbFieldPosition=5;"
 		},
 		{
-			"name": "birth_date",
+			"name": "birth_date2",
 			"type": [
 				"long",
 				"null"
 			],
-			"meta": "dbFieldName=birth_date;dbFieldPosition=6;"
+			"meta": "dbFieldName=birth_date2;dbFieldPosition=6;"
 		},
 		{
-			"name": "deleted",
+			"name": "deleted2",
 			"type": [
 				"string",
 				"null"
 			],
-			"meta": "dbFieldName=DELETED;dbFieldPosition=7;"
+			"meta": "dbFieldName=deleted2;dbFieldPosition=7;"
 		}
 	]
 }
